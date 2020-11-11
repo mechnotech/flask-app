@@ -66,3 +66,4 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myflask_app:lastest
             sudo docker stop myflask_container
             sudo docker run --rm --name=myflask_container -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/myflask_app:lastest
+          # Если это первый деплой на новую машину 1) установить на ней Docker 2) зачачать образ, запустить контейнер (!) с именем.
