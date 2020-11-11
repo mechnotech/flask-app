@@ -46,7 +46,7 @@ jobs:
           context: .
           tag_with_ref: true
           load: true
-      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app:lastest
+      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
