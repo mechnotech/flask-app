@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tag_with_ref: true
+          tags: ${{ secrets.DOCKER_REGISTRY }}/myflask_app:lastest
           load: true
       - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app:lastest
 
