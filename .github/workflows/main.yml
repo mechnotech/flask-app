@@ -47,7 +47,7 @@ jobs:
           context: .
           tags: emercoin/myflask_app:0.0.1
           load: true
-      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app:lastest
+      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app:0.0.1
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
