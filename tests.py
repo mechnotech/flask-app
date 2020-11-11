@@ -8,6 +8,7 @@ class FlaskAppTests(unittest.TestCase):
         self.app = tested_app.app.test_client()
 
     def test_get(self):
+        """ Тестируем метод GET"""
         r = self.app.get('/')
         self.assertEqual(r.data.decode('utf-8'), 'У меня получилось!')
 
