@@ -45,9 +45,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          tags: emercoin/myflask_app:0.0.1
+          tag_with_ref: true
           load: true
-      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app:0.0.1
+      - run: docker push ${{ secrets.DOCKER_REGISTRY }}/myflask_app
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
