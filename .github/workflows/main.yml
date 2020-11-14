@@ -40,7 +40,7 @@ jobs:
         with:
           repo: "mechnotech/flask-app"
           version: "latest"
-          file: "plague-linux.zip"
+          file: "redis-6.0.6.tar.gz"
           #token: ${{ secrets.YOUR_TOKEN }}
 
       - name: Login to DockerHub
