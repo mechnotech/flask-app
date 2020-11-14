@@ -49,7 +49,7 @@ jobs:
         with:
           repo: mechnotech/flask-app
           version: latest
-          file: emercoin-${{steps.vars.outputs.tag}}-x86_64-linux-gnu.tar.gz
+          file: "emercoin-${{steps.vars.outputs.tag}}-x86_64-linux-gnu.tar.gz"
           #token: ${{ secrets.YOUR_TOKEN }}
 
       - name: Login to DockerHub
