@@ -41,7 +41,8 @@ jobs:
       - name: Get the version
         id: vars
         run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
-          #tag=${tag//[a-z]/}
+          #  tag=${tag//[a-z]/}
+          #  eee
 
       - name: Download assers
         uses: dsaltares/fetch-gh-release-asset@master
