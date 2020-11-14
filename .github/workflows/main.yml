@@ -43,7 +43,7 @@ jobs:
         run: |
           vers=${GITHUB_REF:10}
           digvers=${vers//[a-z]/}
-          echo ::set-output name=tag::$(echo ${vers})
+          echo ::set-output name=tag::$(echo ${digvers})
 
       - name: Download assers
         uses: dsaltares/fetch-gh-release-asset@master
