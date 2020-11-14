@@ -40,7 +40,7 @@ jobs:
 
       - name: Get the version
         id: vars
-        run: echo ::set-output name=tag::S($(echo ${GITHUB_REF:10})//[a-z]/)
+        run: echo ::set-output name=tag::$($(echo ${GITHUB_REF:10})//[a-z]/)
           #tag=${tag//[a-z]/}
 
       - name: Download assers
