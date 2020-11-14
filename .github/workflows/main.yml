@@ -41,9 +41,7 @@ jobs:
       - name: Get the version
         id: vars
         run: |
-          echo ::set-output name=tag::$(echo ${GITHUB_REF:10} | tr -cd [:digit:][:punct:])
-          echo tag
-          echo $set-output
+          echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
           env
 
 #      - name: Download assers
